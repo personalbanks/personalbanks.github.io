@@ -62,7 +62,7 @@ Every change pushed to the `main` branch will be reflected at:
 ## 📞 Contact Information
 - 📍 Address: 123 Financial Street, Banking City, BC 12345  
 - ☎️ Phone: (555) 123-4567  
-- 📧 Email: support@personalbank.com  
+- 📧 Email: personalbanks247@gmail.com  
 - 🌍 Website: [personalbanks.github.io](https://personalbanks.github.io)
 
 ---
