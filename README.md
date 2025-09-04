@@ -3,7 +3,7 @@
 Welcome to the official GitHub repository of **Personal Bank**.  
 This repository hosts the source code for our official website, published at:
 
-🔗 **https://personalbank.github.io**
+🔗 **https://personalbanks.github.io**
 
 ---
 
@@ -28,7 +28,7 @@ we combine **trust, innovation, and personalized service** to help our customers
 
 ## 📂 Repository Structure
 
-personalbank.github.io/ 
+personalbanks.github.io/ 
 ├── README.md              # Documentation for repo 
 ├── index.html             # Homepage
 ├── about.html             # About Us page 
@@ -55,7 +55,7 @@ personalbank.github.io/
 This website is deployed automatically using **GitHub Pages**.  
 Every change pushed to the `main` branch will be reflected at:
 
-🔗 https://personalbank.github.io
+🔗 https://personalbanks.github.io
 
 ---
 
@@ -63,7 +63,7 @@ Every change pushed to the `main` branch will be reflected at:
 - 📍 Address: 123 Financial Street, Banking City, BC 12345  
 - ☎️ Phone: (555) 123-4567  
 - 📧 Email: support@personalbank.com  
-- 🌍 Website: [personalbank.github.io](https://personalbank.github.io)
+- 🌍 Website: [personalbanks.github.io](https://personalbanks.github.io)
 
 ---
 
