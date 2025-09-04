@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loans & Schemes - Personal Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Additional styles to ensure dropdowns work properly */
+        .dropdown-menu {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: none;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        /* Animation for dropdowns */
+        .dropdown-menu {
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://media.istockphoto.com/id/2198966728/photo/couple-closing-real-estate-contract-with-real-estate-agent.jpg?s=612x612&w=0&k=20&c=zELmsW-8tjIBcOcvNw1rkAr1QErNKFkHlGWyO99jY3E=');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            margin-top: 50px;
+        }
+        
+        .loan-card {
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .loan-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+            color: #0062cc;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-university me-2"></i>Personal Bank
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item active" href="loans.html">Loans & Schemes</a></li>
+                            <li><a class="dropdown-item" href="financial_education.html">Financial Education</a></li>
+                            <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                            <li><a class="dropdown-item" href="investor_relations.html">Investor Relations</a></li>
+                            <li><a class="dropdown-item" href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Loans & Schemes</h1>
+            <p class="lead mb-4">Find the perfect financing solution for your needs</p>
+        </div>
+    </section>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">Our Loan Products</h2>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card loan-card h-100">
+                                    <div class="card-body">
+                                        <div class="text-center mb-3">
+                                            <i class="fas fa-home fa-3x text-primary"></i>
+                                        </div>
+                                        <h4 class="card-title">Home Loans</h4>
+                                        <p class="card-text">Make your dream home a reality with our competitive mortgage options.</p>
+                                        <ul>
+                                            <li>Fixed-rate and adjustable-rate mortgages</li>
+                                            <li>Low down payment options</li>
+                                            <li>Refinancing available</li>
+                                            <li>Quick approval process</li>
+                                        </ul>
+                                        <p><strong>Interest Rates:</strong> Starting at 3.5% APR</p>
+                                        <a href="#" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card loan-card h-100">
+                                    <div class="card-body">
+                                        <div class="text-center mb-3">
+                                            <i class="fas fa-car fa-3x text-primary"></i>
+                                        </div>
+                                        <h4 class="card-title">Auto Loans</h4>
+                                        <p class="card-text">Drive away in your dream car with our competitive auto financing.</p>
+                                        <ul>
+                                            <li>New and used vehicle financing</li>
+                                            <li>Flexible repayment terms</li>
+                                            <li>Competitive interest rates</li>
+                                            <li>Online application process</li>
+                                        </ul>
+                                        <p><strong>Interest Rates:</strong> Starting at 4.2% APR</p>
+                                        <a href="#" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card loan-card h-100">
+                                    <div class="card-body">
+                                        <div class="text-center mb-3">
+                                            <i class="fas fa-graduation-cap fa-3x text-primary"></i>
+                                        </div>
+                                        <h4 class="card-title">Education Loans</h4>
+                                        <p class="card-text">Invest in your future with our education financing options.</p>
+                                        <ul>
+                                            <li>Undergraduate and graduate programs</li>
+                                            <li>Deferred payment options</li>
+                                            <li>Competitive interest rates</li>
+                                            <li>Cosigner release available</li>
+                                        </ul>
+                                        <p><strong>Interest Rates:</strong> Starting at 4.8% APR</p>
+                                        <a href="#" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card loan-card h-100">
+                                    <div class="card-body">
+                                        <div class="text-center mb-3">
+                                            <i class="fas fa-briefcase fa-3x text-primary"></i>
+                                        </div>
+                                        <h4 class="card-title">Personal Loans</h4>
+                                        <p class="card-text">Get the funds you need for any purpose with our flexible personal loans.</p>
+                                        <ul>
+                                            <li>Debt consolidation</li>
+                                            <li>Home improvements</li>
+                                            <li>Medical expenses</li>
+                                            <li>Vacation funding</li>
+                                        </ul>
+                                        <p><strong>Interest Rates:</strong> Starting at 6.5% APR</p>
+                                        <a href="#" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">Government Schemes</h2>
+                        <p>We participate in various government-backed loan programs to make financing more accessible:</p>
+                        
+                        <div class="accordion" id="schemesAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        First-Time Homebuyer Program
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#schemesAccordion">
+                                    <div class="accordion-body">
+                                        <p>This program helps first-time homebuyers achieve their dream of homeownership with:</p>
+                                        <ul>
+                                            <li>Down payment assistance</li>
+                                            <li>Reduced closing costs</li>
+                                            <li>Educational resources for homebuyers</li>
+                                            <li>Lower credit score requirements</li>
+                                        </ul>
+                                        <p><strong>Eligibility:</strong> First-time homebuyers, income limits apply</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                        Small Business Administration (SBA) Loans
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#schemesAccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer SBA-guaranteed loans to help small businesses start and grow:</p>
+                                        <ul>
+                                            <li>7(a) Loan Program</li>
+                                            <li>504 Loan Program</li>
+                                            <li>Microloan Program</li>
+                                            <li>Disaster Assistance Loans</li>
+                                        </ul>
+                                        <p><strong>Eligibility:</strong> Small businesses meeting SBA size standards</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                        Agricultural Loan Programs
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#schemesAccordion">
+                                    <div class="accordion-body">
+                                        <p>We support farmers and agricultural businesses with specialized loan programs:</p>
+                                        <ul>
+                                            <li>Operating loans for equipment and supplies</li>
+                                            <li>Real estate loans for land purchase</li>
+                                            <li>Emergency disaster loans</li>
+                                            <li>Conservation loans</li>
+                                        </ul>
+                                        <p><strong>Eligibility:</strong> Farmers and agricultural businesses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Loan Calculator</h4>
+                        <form id="loanCalculator">
+                            <div class="mb-3">
+                                <label for="loanAmount" class="form-label">Loan Amount ($)</label>
+                                <input type="number" class="form-control" id="loanAmount" placeholder="Enter amount">
+                            </div>
+                            <div class="mb-3">
+                                <label for="interestRate" class="form-label">Interest Rate (%)</label>
+                                <input type="number" class="form-control" id="interestRate" placeholder="Enter rate" step="0.01">
+                            </div>
+                            <div class="mb-3">
+                                <label for="loanTerm" class="form-label">Loan Term (years)</label>
+                                <input type="number" class="form-control" id="loanTerm" placeholder="Enter years">
+                            </div>
+                            <button type="button" class="btn btn-primary w-100" onclick="calculateLoan()">Calculate Payment</button>
+                        </form>
+                        <div id="calculationResult" class="mt-3 p-3 bg-light rounded d-none">
+                            <h5>Monthly Payment: <span id="monthlyPayment" class="text-primary"></span></h5>
+                            <p class="mb-0">Total Payment: <span id="totalPayment"></span></p>
+                            <p>Total Interest: <span id="totalInterest"></span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Apply for a Loan</h4>
+                        <p>Ready to apply? Our loan specialists are here to help you through the process.</p>
+                        <div class="d-grid gap-2">
+                            <a href="contact.html" class="btn btn-primary">Contact a Loan Officer</a>
+                            <a href="#" class="btn btn-outline-primary">Start Online Application</a>
+                        </div>
+                        
+                        <hr>
+                        
+                        <h5>What You'll Need</h5>
+                        <ul>
+                            <li>Government-issued ID</li>
+                            <li>Proof of income</li>
+                            <li>Employment information</li>
+                            <li>Financial statements</li>
+                            <li>Information about collateral (if applicable)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Personal Bank</h5>
+                    <p>Your trusted financial partner for all your banking needs. We're committed to providing exceptional service and innovative solutions.</p>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Banking Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html#personal" class="text-white text-decoration-none">Personal Banking</a></li>
+                        <li><a href="services.html#business" class="text-white text-decoration-none">Business Banking</a></li>
+                        <li><a href="services.html#wealth" class="text-white text-decoration-none">Wealth Management</a></li>
+                        <li><a href="loans.html" class="text-white text-decoration-none">Loans & Mortgages</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="careers.html" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Legal & Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="terms.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="documentation.html" class="text-white text-decoration-none">Documentation</a></li>
+                        <li><a href="financial_education.html" class="text-white text-decoration-none">Financial Education</a></li>
+                        <li><a href="investor_relations.html" class="text-white text-decoration-none">Investor Relations</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0">&copy; 2023 Personal Bank. All rights reserved.</p>
+                <div>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize dropdowns explicitly to ensure they work
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+            var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                return new bootstrap.Dropdown(dropdownToggleEl)
+            });
+        });
+
+        function calculateLoan() {
+            const amount = parseFloat(document.getElementById('loanAmount').value);
+            const rate = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+            const term = parseFloat(document.getElementById('loanTerm').value) * 12;
+            
+            if (amount && rate && term) {
+                const x = Math.pow(1 + rate, term);
+                const monthly = (amount * x * rate) / (x - 1);
+                const total = monthly * term;
+                const interest = total - amount;
+                
+                document.getElementById('monthlyPayment').textContent = '$' + monthly.toFixed(2);
+                document.getElementById('totalPayment').textContent = '$' + total.toFixed(2);
+                document.getElementById('totalInterest').textContent = '$' + interest.toFixed(2);
+                
+                document.getElementById('calculationResult').classList.remove('d-none');
+            }
+        }
+    </script>
+</body>
+</html>

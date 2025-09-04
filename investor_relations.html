@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Relations - Personal Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Additional styles to ensure dropdowns work properly */
+        .dropdown-menu {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: none;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        /* Animation for dropdowns */
+        .dropdown-menu {
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            margin-top: 50px;
+        }
+        
+        .table th {
+            background-color: #f8f9fa;
+        }
+        
+        .border.rounded {
+            transition: transform 0.3s;
+        }
+        
+        .border.rounded:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-university me-2"></i>Personal Bank
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item" href="loans.html">Loans & Schemes</a></li>
+                            <li><a class="dropdown-item" href="financial_education.html">Financial Education</a></li>
+                            <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                            <li><a class="dropdown-item" href="investor_relations.html">Investor Relations</a></li>
+                            <li><a class="dropdown-item" href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Investor Relations</h1>
+            <p class="lead mb-4">Information for our shareholders and potential investors</p>
+        </div>
+    </section>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">Financial Performance</h2>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Period</th>
+                                        <th>Revenue</th>
+                                        <th>Net Income</th>
+                                        <th>EPS</th>
+                                        <th>Assets</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Q3 2023</td>
+                                        <td>$1.25B</td>
+                                        <td>$350M</td>
+                                        <td>$2.15</td>
+                                        <td>$85.3B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q2 2023</td>
+                                        <td>$1.18B</td>
+                                        <td>$320M</td>
+                                        <td>$1.97</td>
+                                        <td>$82.7B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q1 2023</td>
+                                        <td>$1.15B</td>
+                                        <td>$305M</td>
+                                        <td>$1.88</td>
+                                        <td>$80.1B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FY 2022</td>
+                                        <td>$4.52B</td>
+                                        <td>$1.25B</td>
+                                        <td>$7.68</td>
+                                        <td>$78.5B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FY 2021</td>
+                                        <td>$4.15B</td>
+                                        <td>$1.12B</td>
+                                        <td>$6.92</td>
+                                        <td>$72.3B</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-primary me-2">Download Quarterly Report</a>
+                            <a href="#" class="btn btn-outline-primary">View Financial Statements</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">Stock Information</h2>
+                        
+                        <div class="row text-center mb-4">
+                            <div class="col-md-4">
+                                <div class="border rounded p-3">
+                                    <h5 class="text-muted">Current Price</h5>
+                                    <h3 class="text-primary">$84.75</h3>
+                                    <p class="text-success mb-0"><i class="fas fa-caret-up me-1"></i> +1.25%</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="border rounded p-3">
+                                    <h5 class="text-muted">52-Week Range</h5>
+                                    <h3 class="mb-0">$68.50 - $89.25</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="border rounded p-3">
+                                    <h5 class="text-muted">Market Cap</h5>
+                                    <h3 class="mb-0">$13.8B</h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <p>NASDAQ: PERS | CUSIP: 123456789 | CIK: 0001234567</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-outline-primary">Historical Prices</a>
+                                <a href="#" class="btn btn-outline-primary">Dividend History</a>
+                                <a href="#" class="btn btn-outline-primary">Stock Splits</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">News & Events</h2>
+                        
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Personal Bank Announces Q3 2023 Results</h5>
+                                    <small>October 25, 2023</small>
+                                </div>
+                                <p class="mb-1">Personal Bank reported strong third quarter results with net income of $350 million, up 9% from the prior year.</p>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Bank Announces Quarterly Dividend</h5>
+                                    <small>October 15, 2023</small>
+                                </div>
+                                <p class="mb-1">The Board of Directors declared a quarterly cash dividend of $0.45 per common share, payable November 15, 2023.</p>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Personal Bank to Acquire Community First Bank</h5>
+                                    <small>September 10, 2023</small>
+                                </div>
+                                <p class="mb-1">Personal Bank has entered into a definitive agreement to acquire Community First Bank, expanding its presence in the Midwest.</p>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">New Digital Banking Platform Launch</h5>
+                                    <small>August 5, 2023</small>
+                                </div>
+                                <p class="mb-1">Personal Bank launched its next-generation digital banking platform with enhanced features and security.</p>
+                            </a>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-outline-primary">View All News</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="mb-4">Upcoming Events</h2>
+                        
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2 text-center">
+                                        <div class="bg-primary text-white p-2 rounded">
+                                            <h5 class="mb-0">NOV</h5>
+                                            <h3 class="mb-0">15</h3>
+                                            <p class="mb-0">2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h5 class="card-title">Q3 2023 Earnings Conference Call</h5>
+                                        <p class="card-text mb-0">Join our leadership team to discuss third quarter 2023 financial results.</p>
+                                    </div>
+                                    <div class="col-md-3 text-md-end">
+                                        <a href="#" class="btn btn-outline-primary">Add to Calendar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2 text-center">
+                                        <div class="bg-primary text-white p-2 rounded">
+                                            <h5 class="mb-0">DEC</h5>
+                                            <h3 class="mb-0">5</h3>
+                                            <p class="mb-0">2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h5 class="card-title">Investor Day 2023</h5>
+                                        <p class="card-text mb-0">Annual Investor Day presentation at our headquarters in Banking City.</p>
+                                    </div>
+                                    <div class="col-md-3 text-md-end">
+                                        <a href="#" class="btn btn-outline-primary">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2 text-center">
+                                        <div class="bg-primary text-white p-2 rounded">
+                                            <h5 class="mb-0">JAN</h5>
+                                            <h3 class="mb-0">25</h3>
+                                            <p class="mb-0">2024</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h5 class="card-title">Q4 2023 Earnings Conference Call</h5>
+                                        <p class="card-text mb-0">Join our leadership team to discuss fourth quarter and full year 2023 financial results.</p>
+                                    </div>
+                                    <div class="col-md-3 text-md-end">
+                                        <a href="#" class="btn btn-outline-primary">Add to Calendar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Leadership Team</h4>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="CEO" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                                <div>
+                                    <h6 class="mb-0">Robert Johnson</h6>
+                                    <small class="text-muted">Chief Executive Officer</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="CFO" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                                <div>
+                                    <h6 class="mb-0">Sarah Williams</h6>
+                                    <small class="text-muted">Chief Financial Officer</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="CTO" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                                <div>
+                                    <h6 class="mb-0">Michael Chen</h6>
+                                    <small class="text-muted">Chief Technology Officer</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="#" class="btn btn-outline-primary">View All Executives</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Investor Resources</h4>
+                        
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-file-pdf text-danger me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0">Annual Report 2022</h6>
+                                        <small class="text-muted">PDF, 2.5MB</small>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-file-pdf text-danger me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0">Proxy Statement 2023</h6>
+                                        <small class="text-muted">PDF, 1.8MB</small>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-chart-line text-primary me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0">Investor Presentation</h6>
+                                        <small class="text-muted">November 2023</small>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-building text-primary me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0">Corporate Governance</h6>
+                                        <small class="text-muted">Policies and guidelines</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Email Alerts</h4>
+                        <p>Sign up to receive email alerts about financial reports, events, and other investor news.</p>
+                        
+                        <form>
+                            <div class="mb-3">
+                                <label for="investorName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="investorName" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="investorEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="investorEmail" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Select Alerts</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="financialReleases">
+                                    <label class="form-check-label" for="financialReleases">Financial News Releases</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="events">
+                                    <label class="form-check-label" for="events">Events & Presentations</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="secFilings">
+                                    <label class="form-check-label" for="secFilings">SEC Filings</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Contact Investor Relations</h4>
+                        <p>For investor inquiries, please contact:</p>
+                        
+                        <div class="mb-3">
+                            <h6>John Davis</h6>
+                            <p class="mb-0">Vice President, Investor Relations</p>
+                            <p class="mb-0">Email: investors@personalbank.com</p>
+                            <p>Phone: (555) 123-INVEST (468378)</p>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <h6>Mailing Address</h6>
+                            <p class="mb-0">Personal Bank Investor Relations</p>
+                            <p class="mb-0">123 Financial Street</p>
+                            <p class="mb-0">Banking City, BC 12345</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Personal Bank</h5>
+                    <p>Your trusted financial partner for all your banking needs. We're committed to providing exceptional service and innovative solutions.</p>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Banking Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html#personal" class="text-white text-decoration-none">Personal Banking</a></li>
+                        <li><a href="services.html#business" class="text-white text-decoration-none">Business Banking</a></li>
+                        <li><a href="services.html#wealth" class="text-white text-decoration-none">Wealth Management</a></li>
+                        <li><a href="loans.html" class="text-white text-decoration-none">Loans & Mortgages</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="careers.html" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Legal & Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="terms.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="documentation.html" class="text-white text-decoration-none">Documentation</a></li>
+                        <li><a href="financial_education.html" class="text-white text-decoration-none">Financial Education</a></li>
+                        <li><a href="investor_relations.html" class="text-white text-decoration-none">Investor Relations</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0">&copy; 2023 Personal Bank. All rights reserved.</p>
+                <div>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize dropdowns explicitly to ensure they work
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+            var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                return new bootstrap.Dropdown(dropdownToggleEl)
+            });
+        });
+    </script>
+</body>
+</html>

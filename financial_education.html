@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Education - Personal Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        /* Navigation and footer styles */
+        .dropdown-menu {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: none;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .dropdown-menu {
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-university me-2"></i>Personal Bank
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item" href="loans.html">Loans & Schemes</a></li>
+                            <li><a class="dropdown-item active" href="financial_education.html">Financial Education</a></li>
+                            <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                            <li><a class="dropdown-item" href="investor_relations.html">Investor Relations</a></li>
+                            <li><a class="dropdown-item" href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Financial Education</h1>
+            <p class="lead mb-4">Resources to help you make informed financial decisions</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">Learning Center</h2>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Budgeting">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Budgeting & Saving</h5>
+                                        <p class="card-text">Learn how to create a budget, track expenses, and build savings for your financial goals.</p>
+                                        <a href="#" class="btn btn-outline-primary">Explore Resources</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Credit">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Credit & Debt Management</h5>
+                                        <p class="card-text">Understand credit scores, manage debt, and learn strategies for improving your financial health.</p>
+                                        <a href="#" class="btn btn-outline-primary">Explore Resources</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <img src="https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Home Buying">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Home Buying</h5>
+                                        <p class="card-text">Navigate the home buying process, from mortgage options to closing on your new home.</p>
+                                        <a href="#" class="btn btn-outline-primary">Explore Resources</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Investing">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Investing & Retirement</h5>
+                                        <p class="card-text">Plan for your future with investment strategies and retirement planning resources.</p>
+                                        <a href="#" class="btn btn-outline-primary">Explore Resources</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">Financial Calculators</h2>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mortgage Calculator</h5>
+                                        <p class="card-text">Estimate your monthly mortgage payment based on home price, down payment, and interest rate.</p>
+                                        <a href="#" class="btn btn-outline-primary">Use Calculator</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Retirement Calculator</h5>
+                                        <p class="card-text">Determine how much you need to save for retirement based on your goals and timeline.</p>
+                                        <a href="#" class="btn btn-outline-primary">Use Calculator</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Budget Calculator</h5>
+                                        <p class="card-text">Create a personalized budget based on your income, expenses, and financial goals.</p>
+                                        <a href="#" class="btn btn-outline-primary">Use Calculator</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Debt Payoff Calculator</h5>
+                                        <p class="card-text">Develop a strategy to pay off your debt faster and save on interest payments.</p>
+                                        <a href="#" class="btn btn-outside-primary">Use Calculator</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">Webinars & Workshops</h2>
+                        
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2 text-center">
+                                        <div class="bg-primary text-white p-2 rounded">
+                                            <h5 class="mb-0">NOV</h5>
+                                            <h3 class="mb-0">8</h3>
+                                            <p class="mb-0">2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h5 class="card-title">First-Time Homebuyer Workshop</h5>
+                                        <p class="card-text mb-0">Learn about the home buying process, mortgage options, and down payment assistance programs.</p>
+                                    </div>
+                                    <div class="col-md-3 text-md-end">
+                                        <a href="#" class="btn btn-outline-primary">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2 text-center">
+                                        <div class="bg-primary text-white p-2 rounded">
+                                            <h5 class="mb-0">NOV</h5>
+                                            <h3 class="mb-0">15</h3>
+                                            <p class="mb-0">2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h5 class="card-title">Retirement Planning Webinar</h5>
+                                        <p class="card-text mb-0">Strategies for building a retirement nest egg and making your savings last.</p>
+                                    </div>
+                                    <div class="col-md-3 text-md-end">
+                                        <a href="#" class="btn btn-outline-primary">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2 text-center">
+                                        <div class="bg-primary text-white p-2 rounded">
+                                            <h5 class="mb-0">NOV</h5>
+                                            <h3 class="mb-0">22</h3>
+                                            <p class="mb-0">2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h5 class="card-title">College Funding Strategies</h5>
+                                <p class="card-text mb-0">Learn about 529 plans, financial aid, and other strategies for saving for education expenses.</p>
+                            </div>
+                            <div class="col-md-3 text-md-end">
+                                <a href="#" class="btn btn-outline-primary">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-2 text-center">
+                                <div class="bg-primary text-white p-2 rounded">
+                                    <h5 class="mb-0">DEC</h5>
+                                    <h3 class="mb-0">6</h3>
+                                    <p class="mb-0">2023</p>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <h5 class="card-title">Small Business Finance Workshop</h5>
+                                <p class="card-text mb-0">Financial management strategies for small business owners and entrepreneurs.</p>
+                            </div>
+                            <div class="col-md-3 text-md-end">
+                                <a href="#" class="btn btn-outline-primary">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h2 class="mb-4">Financial Wellness Blog</h2>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog post">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Budgeting</span>
+                                <h5 class="card-title">5 Steps to Create a Budget That Works</h5>
+                                <p class="card-text">Learn how to create a realistic budget that helps you achieve your financial goals.</p>
+                                <p class="card-text"><small class="text-muted">October 15, 2023</small></p>
+                                <a href="#" class="btn btn-outline-primary">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog post">
+                            <div class="card-body">
+                                <span class="badge bg-success mb-2">Credit</span>
+                                <h5 class="card-title">Understanding Your Credit Score</h5>
+                                <p class="card-text">What goes into your credit score and how to improve it over time.</p>
+                                <p class="card-text"><small class="text-muted">October 8, 2023</small></p>
+                                <a href="#" class="btn btn-outline-primary">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog post">
+                            <div class="card-body">
+                                <span class="badge bg-info mb-2">Home Buying</span>
+                                <h5 class="card-title">First-Time Homebuyer Mistakes to Avoid</h5>
+                                <p class="card-text">Common pitfalls for first-time homebuyers and how to steer clear of them.</p>
+                                <p class="card-text"><small class="text-muted">October 1, 2023</small></p>
+                                <a href="#" class="btn btn-outline-primary">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog post">
+                            <div class="card-body">
+                                <span class="badge bg-warning mb-2">Investing</span>
+                                <h5 class="card-title">Getting Started with Investing</h5>
+                                <p class="card-text">A beginner's guide to building an investment portfolio that matches your goals.</p>
+                                <p class="card-text"><small class="text-muted">September 24, 2023</small></p>
+                                <a href="#" class="btn btn-outline-primary">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-primary">View All Articles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Financial Health Check</h4>
+                <p>Take our quick assessment to evaluate your financial health and get personalized recommendations.</p>
+                <div class="d-grid">
+                    <a href="#" class="btn btn-primary">Start Assessment</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Downloadable Resources</h4>
+                
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-file-pdf text-danger me-3"></i>
+                            <div>
+                                <h6 class="mb-0">Budget Worksheet</h6>
+                                <small class="text-muted">PDF, 1.2MB</small>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-file-pdf text-danger me-3"></i>
+                            <div>
+                                <h6 class="mb-0">Debt Payoff Plan</h6>
+                                <small class="text-muted">PDF, 0.8MB</small>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-file-pdf text-danger me-3"></i>
+                            <div>
+                                <h6 class="mb-0">Retirement Planning Guide</h6>
+                                <small class="text-muted">PDF, 2.1MB</small>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-file-pdf text-danger me-3"></i>
+                            <div>
+                                <h6 class="mb-0">Home Buying Checklist</h6>
+                                <small class="text-muted">PDF, 1.5MB</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Community Programs</h4>
+                <p>Personal Bank is committed to financial education in our communities. We offer:</p>
+                
+                <ul>
+                    <li>Free financial workshops for schools and community groups</li>
+                    <li>One-on-one financial coaching</li>
+                    <li>Youth savings programs</li>
+                    <li>Small business financial education</li>
+                </ul>
+                
+                <div class="d-grid">
+                    <a href="#" class="btn btn-outline-primary">Request a Workshop</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Ask an Expert</h4>
+                <p>Have a financial question? Our team of financial educators is here to help.</p>
+                
+                <form action="https://formspree.io/f/xkgvpzyk" method="POST">
+                    <div class="mb-3">
+                        <label for="questionName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="questionName" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="questionEmail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="questionEmail" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="questionTopic" class="form-label">Topic</label>
+                        <select class="form-select" id="questionTopic" required>
+                            <option value="">Select a topic</option>
+                            <option value="budgeting">Budgeting & Saving</option>
+                            <option value="credit">Credit & Debt</option>
+                            <option value="home">Home Buying</option>
+                            <option value="investing">Investing & Retirement</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="question" class="form-label">Your Question</label>
+                        <textarea class="form-control" id="question" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary w-100">Submit Question</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
