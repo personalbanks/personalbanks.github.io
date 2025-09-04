@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press Room - Personal Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Additional styles to ensure dropdowns work properly */
+        .dropdown-menu {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: none;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        /* Animation for dropdowns */
+        .dropdown-menu {
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            margin-top: 50px;
+        }
+        
+        .press-card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        
+        .press-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .badge {
+            font-size: 0.7rem;
+        }
+        
+        .media-resource-item {
+            transition: all 0.2s ease;
+        }
+        
+        .media-resource-item:hover {
+            background-color: #f8f9fa;
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-university me-2"></i>Personal Bank
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item" href="loans.html">Loans & Schemes</a></li>
+                            <li><a class="dropdown-item" href="financial_education.html">Financial Education</a></li>
+                            <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                            <li><a class="dropdown-item" href="investor_relations.html">Investor Relations</a></li>
+                            <li><a class="dropdown-item active" href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Press Room</h1>
+            <p class="lead mb-4">News, media resources, and company information</p>
+        </div>
+    </section>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">Latest News</h2>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card press-card h-100">
+                                    <img src="https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="News image">
+                                    <div class="card-body">
+                                        <span class="badge bg-primary mb-2">Press Release</span>
+                                        <h5 class="card-title">Personal Bank Announces Q3 2023 Results</h5>
+                                        <p class="card-text">Personal Bank reported strong third quarter results with net income of $350 million, up 9% from the prior year.</p>
+                                        <p class="card-text"><small class="text-muted">October 25, 2023</small></p>
+                                        <a href="#" class="btn btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card press-card h-100">
+                                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="News image">
+                                    <div class="card-body">
+                                        <span class="badge bg-success mb-2">Announcement</span>
+                                        <h5 class="card-title">Personal Bank to Acquire Community First Bank</h5>
+                                        <p class="card-text">Personal Bank has entered into a definitive agreement to acquire Community First Bank, expanding its presence in the Midwest.</p>
+                                        <p class="card-text"><small class="text-muted">September 10, 2023</small></p>
+                                        <a href="#" class="btn btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card press-card h-100">
+                                    <img src="https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="News image">
+                                    <div class="card-body">
+                                        <span class="badge bg-info mb-2">Product Launch</span>
+                                        <h5 class="card-title">New Digital Banking Platform Launch</h5>
+                                        <p class="card-text">Personal Bank launched its next-generation digital banking platform with enhanced features and security.</p>
+                                        <p class="card-text"><small class="text-muted">August 5, 2023</small></p>
+                                        <a href="#" class="btn btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="card press-card h-100">
+                                    <img src="https://images.unsplash.com/photo-1573164574230-db1d5e960238?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="News image">
+                                    <div class="card-body">
+                                        <span class="badge bg-warning mb-2">CSR</span>
+                                        <h5 class="card-title">Personal Bank Commits $5M to Financial Literacy Programs</h5>
+                                        <p class="card-text">Personal Bank announced a $5 million commitment to support financial literacy programs in underserved communities.</p>
+                                        <p class="card-text"><small class="text-muted">July 20, 2023</small></p>
+                                        <a href="#" class="btn btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-primary">View All News</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">Press Releases</h2>
+                        
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Personal Bank Announces Quarterly Dividend</h5>
+                                    <small>October 15, 2023</small>
+                                </div>
+                                <p class="mb-1">The Board of Directors declared a quarterly cash dividend of $0.45 per common share.</p>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Personal Bank Names New Chief Marketing Officer</h5>
+                                    <small>September 28, 2023</small>
+                                </div>
+                                <p class="mb-1">Personal Bank announced the appointment of Jennifer Lee as Chief Marketing Officer.</p>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Personal Bank Recognized as Best Place to Work</h5>
+                                    <small>September 5, 2023</small>
+                                </div>
+                                <p class="mb-1">Personal Bank has been recognized as one of the Best Places to Work in Banking for 2023.</p>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Personal Bank Expands Small Business Lending Program</h5>
+                                    <small>August 15, 2023</small>
+                                </div>
+                                <p class="mb-1">Personal Bank announced the expansion of its small business lending program with $100 million in new funding.</p>
+                            </a>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-outline-primary">View All Press Releases</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="mb-4">In the News</h2>
+                        
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Personal Bank's Digital Transformation Featured in Financial Times</h5>
+                                    <small>October 10, 2023</small>
+                                </div>
+                                <p class="mb-1">Financial Times explores how Personal Bank's digital transformation is driving growth.</p>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">CEO Robert Johnson Interviewed on Bloomberg Business</h5>
+                                    <small>September 22, 2023</small>
+                                </div>
+                                <p class="mb-1">CEO Robert Johnson discusses the future of banking and Personal Bank's growth strategy.</p>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Personal Bank's Community Initiatives Featured in Wall Street Journal</h5>
+                                    <small>August 30, 2023</small>
+                                </div>
+                                <p class="mb-1">Wall Street Journal highlights Personal Bank's commitment to community development.</p>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Personal Bank Ranked Top Digital Bank by Forbes</h5>
+                                    <small>August 5, 2023</small>
+                                </div>
+                                <p class="mb-1">Forbes ranks Personal Bank as one of the top digital banks for customer experience.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Media Resources</h4>
+                        
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-camera me-3 text-primary"></i>
+                                    <div>
+                                        <h6 class="mb-0">Company Logos</h6>
+                                        <small class="text-muted">High-resolution logo files</small>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-images me-3 text-primary"></i>
+                                    <div>
+                                        <h6 class="mb-0">Executive Photos</h6>
+                                        <small class="text-muted">Photos of our leadership team</small>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-building me-3 text-primary"></i>
+                                    <div>
+                                        <h6 class="mb-0">Branch Images</h6>
+                                        <small class="text-muted">Photos of our branches</small>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-file-alt me-3 text-primary"></i>
+                                    <div>
+                                        <h6 class="mb-0">Fact Sheet</h6>
+                                        <small class="text-muted">Company facts and statistics</small>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="list-group-item list-group-item-action media-resource-item">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-history me-3 text-primary"></i>
+                                    <div>
+                                        <h6 class="mb-0">Company History</h6>
+                                        <small class="text-muted">Timeline of company milestones</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Subscribe to Press Releases</h4>
+                        <p>Get the latest news from Personal Bank delivered to your inbox.</p>
+                        
+                        <form action="https://formspree.io/f/xkgvpzyk" method="POST">
+                            <div class="mb-3">
+                                <label for="mediaName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="mediaName" name="name" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="mediaEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="mediaEmail" name="email" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="mediaOutlet" class="form-label">Media Outlet</label>
+                                <input type="text" class="form-control" id="mediaOutlet" name="media_outlet">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="mediaTitle" class="form-label">Title</label>
+                                <input type="text" class="form-control" id="mediaTitle" name="title">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Media Contacts</h4>
+                        
+                        <div class="mb-3">
+                            <h6>General Media Inquiries</h6>
+                            <p class="mb-0">Email: media@personalbank.com</p>
+                            <p>Phone: (555) 123-MEDIA (63342)</p>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <h6>Jennifer Lee</h6>
+                            <p class="mb-0">Chief Marketing Officer</p>
+                            <p class="mb-0">Email: jlee@personalbank.com</p>
+                            <p>Phone: (555) 123-4567</p>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <h6>David Miller</h6>
+                            <p class="mb-0">Director of Corporate Communications</p>
+                            <p class="mb-0">Email: dmiller@personalbank.com</p>
+                            <p>Phone: (555) 123-4568</p>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <h6>Mailing Address</h6>
+                            <p class="mb-0">Personal Bank Corporate Communications</p>
+                            <p class="mb-0">123 Financial Street</p>
+                            <p class="mb-0">Banking City, BC 12345</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Personal Bank</h5>
+                    <p>Your trusted financial partner for all your banking needs. We're committed to providing exceptional service and innovative solutions.</p>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Banking Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html#personal" class="text-white text-decoration-none">Personal Banking</a></li>
+                        <li><a href="services.html#business" class="text-white text-decoration-none">Business Banking</a></li>
+                        <li><a href="services.html#wealth" class="text-white text-decoration-none">Wealth Management</a></li>
+                        <li><a href="loans.html" class="text-white text-decoration-none">Loans & Mortgages</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="careers.html" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Legal & Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="terms.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="documentation.html" class="text-white text-decoration-none">Documentation</a></li>
+                        <li><a href="financial_education.html" class="text-white text-decoration-none">Financial Education</a></li>
+                        <li><a href="investor_relations.html" class="text-white text-decoration-none">Investor Relations</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0">&copy; 2023 Personal Bank. All rights reserved.</p>
+                <div>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize dropdowns explicitly to ensure they work
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+            var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                return new bootstrap.Dropdown(dropdownToggleEl)
+            });
+        });
+    </script>
+</body>
+</html>

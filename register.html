@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions - Personal Bank</title>
+    <title>Register - Personal Bank</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -29,11 +29,9 @@
         }
         
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #0062cc 0%, #0095ff 100%);
             color: white;
-            padding: 100px 0;
+            padding: 80px 0;
             text-align: center;
             margin-bottom: 30px;
         }
@@ -53,22 +51,42 @@
             margin-top: 50px;
         }
         
-        .terms-card {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        .registration-card {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
             border: none;
-            border-radius: 8px;
         }
         
-        .section-title {
-            color: #0062cc;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 8px;
         }
         
-        .last-updated {
-            color: #6c757d;
-            font-style: italic;
+        .btn-primary {
+            background: linear-gradient(135deg, #0062cc 0%, #0095ff 100%);
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 98, 204, 0.3);
+        }
+        
+        .password-strength {
+            height: 5px;
+            margin-top: 5px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+        }
+        
+        .password-strength-bar {
+            height: 100%;
+            border-radius: 5px;
+            width: 0%;
+            transition: width 0.3s;
         }
     </style>
 </head>
@@ -114,7 +132,7 @@
                         <a class="nav-link" href="login.html">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.html">Register</a>
+                        <a class="nav-link active" href="register.html">Register</a>
                     </li>
                 </ul>
             </div>
@@ -124,88 +142,60 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1 class="display-4 fw-bold mb-4">Terms & Conditions</h1>
-            <p class="lead mb-4">Please read these terms carefully before using our services</p>
+            <h1 class="display-4 fw-bold mb-4">Create an Account</h1>
+            <p class="lead mb-4">Join Personal Bank for a seamless banking experience</p>
         </div>
     </section>
 
     <div class="container mt-4">
         <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="card terms-card shadow">
+            <div class="col-md-8 col-lg-6">
+                <div class="card registration-card shadow">
                     <div class="card-body p-5">
-                        <h2 class="mb-4">Personal Bank Terms and Conditions</h2>
-                        <p class="last-updated">Last Updated: January 1, 2023</p>
-                        
-                        <div class="mb-5">
-                            <h4 class="section-title">1. Agreement to Terms</h4>
-                            <p>By accessing or using Personal Bank's services, you agree to be bound by these Terms and Conditions. If you disagree with any part of the terms, you may not access our services.</p>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="section-title">2. Banking Services</h4>
-                            <p>Personal Bank provides various financial services including but not limited to:</p>
-                            <ul>
-                                <li>Checking and savings accounts</li>
-                                <li>Loan and credit products</li>
-                                <li>Investment services</li>
-                                <li>Online and mobile banking</li>
-                                <li>Payment processing</li>
-                            </ul>
-                            <p>All services are subject to account eligibility, application approval, and compliance with banking regulations.</p>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="section-title">3. Account Eligibility and Registration</h4>
-                            <p>To be eligible for Personal Bank services, you must:</p>
-                            <ul>
-                                <li>Be at least 18 years of age</li>
-                                <li>Provide accurate and complete information</li>
-                                <li>Be a resident of a country where we operate</li>
-                                <li>Not be prohibited by law from using our services</li>
-                            </ul>
-                            <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="section-title">4. Fees and Charges</h4>
-                            <p>Personal Bank may charge fees for certain services as outlined in our Fee Schedule. We will provide notice of any fee changes at least 30 days in advance. You are responsible for paying all applicable fees associated with your accounts.</p>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="section-title">5. Privacy and Data Protection</h4>
-                            <p>Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your personal information. By using our services, you consent to our data practices as described in our Privacy Policy.</p>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="section-title">6. Intellectual Property</h4>
-                            <p>All content, trademarks, logos, and other intellectual property on our platform are the property of Personal Bank or our licensors. You may not use, reproduce, or distribute any content without our prior written permission.</p>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="section-title">7. Limitation of Liability</h4>
-                            <p>Personal Bank shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use our services. Our total liability to you for any claims shall not exceed the amount of fees you paid to us in the past six months.</p>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="section-title">8. Changes to Terms</h4>
-                            <p>We may modify these Terms at any time. We will provide notice of material changes through our website, email, or other communication methods. Your continued use of our services after changes constitutes acceptance of the modified Terms.</p>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="section-title">9. Governing Law</h4>
-                            <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law provisions.</p>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="section-title">10. Contact Information</h4>
-                            <p>If you have any questions about these Terms, please contact us at:</p>
-                            <p>
-                                Personal Bank Legal Department<br>
-                                123 Financial Street, Banking City<br>
-                                Email: legal@personalbank.com<br>
-                                Phone: (555) 123-LEGAL
-                            </p>
+                        <h2 class="card-title text-center mb-4">Create an Account</h2>
+                        <form method="POST" action="https://usebasin.com/f/6330ac4b4997" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="first_name" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="first_name" name="first_name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="last_name" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="last_name" name="last_name" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                                <div class="form-text">Must be at least 8 characters with uppercase, lowercase, number, and special character.</div>
+                                <div class="password-strength mt-2">
+                                    <div class="password-strength-bar" id="passwordStrengthBar"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirm_password" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                                <div class="invalid-feedback" id="passwordMatchError">Passwords don't match</div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="terms" required>
+                                <label class="form-check-label" for="terms">I agree to the <a href="terms.html">Terms & Conditions</a> and <a href="privacy.html">Privacy Policy</a></label>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Register</button>
+                            </div>
+                        </form>
+                        <hr class="my-4">
+                        <div class="text-center">
+                            <p>Already have an account? <a href="login.html">Login here</a></p>
                         </div>
                     </div>
                 </div>
@@ -276,6 +266,58 @@
             var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
                 return new bootstrap.Dropdown(dropdownToggleEl)
             });
+            
+            // Password validation
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirm_password');
+            const passwordMatchError = document.getElementById('passwordMatchError');
+            const passwordStrengthBar = document.getElementById('passwordStrengthBar');
+            
+            function validatePassword() {
+                if (password.value !== confirmPassword.value) {
+                    confirmPassword.setCustomValidity("Passwords don't match");
+                    confirmPassword.classList.add('is-invalid');
+                } else {
+                    confirmPassword.setCustomValidity('');
+                    confirmPassword.classList.remove('is-invalid');
+                }
+            }
+            
+            function checkPasswordStrength() {
+                const passwordValue = password.value;
+                let strength = 0;
+                
+                // Check password length
+                if (passwordValue.length >= 8) strength += 20;
+                
+                // Check for uppercase letters
+                if (passwordValue.match(/[A-Z]/)) strength += 20;
+                
+                // Check for lowercase letters
+                if (passwordValue.match(/[a-z]/)) strength += 20;
+                
+                // Check for numbers
+                if (passwordValue.match(/[0-9]/)) strength += 20;
+                
+                // Check for special characters
+                if (passwordValue.match(/[^A-Za-z0-9]/)) strength += 20;
+                
+                // Update strength bar
+                passwordStrengthBar.style.width = strength + '%';
+                
+                // Update color based on strength
+                if (strength < 40) {
+                    passwordStrengthBar.style.backgroundColor = '#dc3545'; // Red
+                } else if (strength < 80) {
+                    passwordStrengthBar.style.backgroundColor = '#ffc107'; // Yellow
+                } else {
+                    passwordStrengthBar.style.backgroundColor = '#28a745'; // Green
+                }
+            }
+            
+            password.addEventListener('input', checkPasswordStrength);
+            password.onchange = validatePassword;
+            confirmPassword.onkeyup = validatePassword;
         });
     </script>
 </body>
