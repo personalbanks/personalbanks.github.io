@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Personal Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .service-card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #0d6efd;
+        }
+        
+        .tab-content {
+            padding: 30px 0;
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: #0d6efd;
+        }
+        
+        .nav-pills .nav-link {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* Navigation and footer styles */
+        .dropdown-menu {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: none;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .dropdown-menu {
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-university me-2"></i>Personal Bank
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item" href="loans.html">Loans & Schemes</a></li>
+                            <li><a class="dropdown-item" href="financial_education.html">Financial Education</a></li>
+                            <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                            <li><a class="dropdown-item" href="investor_relations.html">Investor Relations</a></li>
+                            <li><a class="dropdown-item" href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Our Banking Services</h1>
+            <p class="lead mb-4">Comprehensive financial solutions designed to meet your unique needs</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container mt-4">
+        <!-- Services Tabs -->
+        <section class="py-5">
+            <div class="container">
+                <ul class="nav nav-pills mb-4 justify-content-center" id="servicesTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="personal-tab" data-bs-toggle="pill" data-bs-target="#personal" type="button" role="tab">Personal Banking</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="business-tab" data-bs-toggle="pill" data-bs-target="#business" type="button" role="tab">Business Banking</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="wealth-tab" data-bs-toggle="pill" data-bs-target="#wealth" type="button" role="tab">Wealth Management</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="digital-tab" data-bs-toggle="pill" data-bs-target="#digital" type="button" role="tab">Digital Banking</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content" id="servicesTabContent">
+                    <!-- Personal Banking -->
+                    <div class="tab-pane fade show active" id="personal" role="tabpanel">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-piggy-bank"></i>
+                                        </div>
+                                        <h4 class="card-title">Savings Accounts</h4>
+                                        <p class="card-text">Grow your money with our competitive interest rates and flexible savings options.</p>
+                                        <ul class="text-start">
+                                            <li>High-yield savings accounts</li>
+                                            <li>Certificates of deposit</li>
+                                            <li>Money market accounts</li>
+                                            <li>Youth savings programs</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                        <h4 class="card-title">Checking Accounts</h4>
+                                        <p class="card-text">Everyday banking with no hidden fees and convenient access to your funds.</p>
+                                        <ul class="text-start">
+                                            <li>Free checking with no minimum balance</li>
+                                            <li>Interest-bearing checking options</li>
+                                            <li>Debit cards with fraud protection</li>
+                                            <li>Overdraft protection services</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-home"></i>
+                                        </div>
+                                        <h4 class="card-title">Mortgage Loans</h4>
+                                        <p class="card-text">Make homeownership a reality with our competitive mortgage options.</p>
+                                        <ul class="text-start">
+                                            <li>Fixed-rate mortgages</li>
+                                            <li>Adjustable-rate mortgages</li>
+                                            <li>FHA and VA loans</li>
+                                            <li>Refinancing options</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-car"></i>
+                                        </div>
+                                        <h4 class="card-title">Auto Loans</h4>
+                                        <p class="card-text">Drive away in your dream car with our competitive auto financing.</p>
+                                        <ul class="text-start">
+                                            <li>New and used car loans</li>
+                                            <li>Low interest rates</li>
+                                            <li>Flexible repayment terms</li>
+                                            <li>Quick approval process</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                        <h4 class="card-title">Credit Cards</h4>
+                                        <p class="card-text">Choose from our range of credit cards with rewards and low rates.</p>
+                                        <ul class="text-start">
+                                            <li>Cashback rewards programs</li>
+                                            <li>Travel rewards cards</li>
+                                            <li>Low APR options</li>
+                                            <li>Balance transfer offers</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <h4 class="card-title">Insurance Services</h4>
+                                        <p class="card-text">Protect what matters most with our comprehensive insurance options.</p>
+                                        <ul class="text-start">
+                                            <li>Auto insurance</li>
+                                            <li>Homeowners insurance</li>
+                                            <li>Life insurance</li>
+                                            <li>Health insurance</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Business Banking -->
+                    <div class="tab-pane fade" id="business" role="tabpanel">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                        <h4 class="card-title">Business Checking</h4>
+                                        <p class="card-text">Banking solutions designed for businesses of all sizes.</p>
+                                        <ul class="text-start">
+                                            <li>Small business checking</li>
+                                            <li>Commercial checking</li>
+                                            <li>Merchant services</li>
+                                            <li>Business debit cards</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-hand-holding-usd"></i>
+                                        </div>
+                                        <h4 class="card-title">Business Loans</h4>
+                                        <p class="card-text">Funding solutions to help your business grow and thrive.</p>
+                                        <ul class="text-start">
+                                            <li>Small business loans</li>
+                                            <li>Commercial real estate loans</li>
+                                            <li>Equipment financing</li>
+                                            <li>Lines of credit</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-money-check"></i>
+                                        </div>
+                                        <h4 class="card-title">Cash Management</h4>
+                                        <p class="card-text">Streamline your business finances with our cash management services.</p>
+                                        <ul class="text-start">
+                                            <li>Remote deposit capture</li>
+                                            <li>ACH and wire transfers</li>
+                                            <li>Payroll services</li>
+                                            <li>Account reconciliation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Wealth Management -->
+                    <div class="tab-pane fade" id="wealth" role="tabpanel">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        <h4 class="card-title">Investment Services</h4>
+                                        <p class="card-text">Grow your wealth with our expert investment guidance.</p>
+                                        <ul class="text-start">
+                                            <li>Retirement planning</li>
+                                            <li>College savings plans</li>
+                                            <li>Brokerage services</li>
+                                            <li>Portfolio management</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-retirement"></i>
+                                        </div>
+                                        <h4 class="card-title">Retirement Planning</h4>
+                                        <p class="card-text">Plan for a secure retirement with our comprehensive services.</p>
+                                        <ul class="text-start">
+                                            <li>IRA accounts</li>
+                                            <li>401(k) rollovers</li>
+                                            <li>Annuities</li>
+                                            <li>Estate planning</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <h4 class="card-title">Trust Services</h4>
+                                        <p class="card-text">Protect and manage your assets for future generations.</p>
+                                        <ul class="text-start">
+                                            <li>Living trusts</li>
+                                            <li>Estate administration</li>
+                                            <li>Charitable giving</li>
+                                            <li>Wealth transfer</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Digital Banking -->
+                    <div class="tab-pane fade" id="digital" role="tabpanel">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-mobile-alt"></i>
+                                        </div>
+                                        <h4 class="card-title">Mobile Banking</h4>
+                                        <p class="card-text">Bank on the go with our feature-rich mobile app.</p>
+                                        <ul class="text-start">
+                                            <li>Mobile check deposit</li>
+                                            <li>Bill pay</li>
+                                            <li>Account alerts</li>
+                                            <li>Biometric login</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-laptop"></i>
+                                        </div>
+                                        <h4 class="card-title">Online Banking</h4>
+                                        <p class="card-text">Manage your finances from anywhere with our secure online platform.</p>
+                                        <ul class="text-start">
+                                            <li>Account management</li>
+                                            <li>Fund transfers</li>
+                                            <li>E-statements</li>
+                                            <li>Budgeting tools</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card service-card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-4">
+                                        <div class="service-icon">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <h4 class="card-title">Security Features</h4>
+                                        <p class="card-text">Bank with confidence knowing your accounts are protected.</p>
+                                        <ul class="text-start">
+                                            <li>Multi-factor authentication</li>
+                                            <li>Encrypted transactions</li>
+                                            <li>Fraud monitoring</li>
+                                            <li>Zero liability protection</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-5 bg-primary text-white">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-4">Ready to Get Started?</h2>
+                <p class="lead mb-4">Our banking specialists are ready to help you find the perfect financial solutions</p>
+                <a href="contact.html" class="btn btn-light btn-lg">Contact Us Today</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Personal Bank</h5>
+                    <p>Your trusted financial partner for all your banking needs. We're committed to providing exceptional service and innovative solutions.</p>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Banking Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html#personal" class="text-white text-decoration-none">Personal Banking</a></li>
+                        <li><a href="services.html#business" class="text-white text-decoration-none">Business Banking</a></li>
+                        <li><a href="services.html#wealth" class="text-white text-decoration-none">Wealth Management</a></li>
+                        <li><a href="loans.html" class="text-white text-decoration-none">Loans & Mortgages</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="careers.html" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Legal & Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="terms.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="documentation.html" class="text-white text-decoration-none">Documentation</a></li>
+                        <li><a href="financial_education.html" class="text-white text-decoration-none">Financial Education</a></li>
+                        <li><a href="investor_relations.html" class="text-white text-decoration-none">Investor Relations</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0">&copy; 2023 Personal Bank. All rights reserved.</p>
+                <div>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize dropdowns explicitly to ensure they work
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+            var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                return new bootstrap.Dropdown(dropdownToggleEl)
+            });
+        });
+    </script>
+</body>
+</html>

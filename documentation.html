@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Personal Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 8px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+            color: #0d6efd;
+        }
+        
+        /* Navigation and footer styles */
+        .dropdown-menu {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: none;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .dropdown-menu {
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        footer {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-university me-2"></i>Personal Bank
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item" href="loans.html">Loans & Schemes</a></li>
+                            <li><a class="dropdown-item" href="financial_education.html">Financial Education</a></li>
+                            <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                            <li><a class="dropdown-item" href="investor_relations.html">Investor Relations</a></li>
+                            <li><a class="dropdown-item" href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Documentation</h1>
+            <p class="lead mb-4">Resources and guides for using our services</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Documentation Categories</h5>
+                        <div class="list-group list-group-flush">
+                            <a href="#accountManagement" class="list-group-item list-group-item-action">Account Management</a>
+                            <a href="#onlineBanking" class="list-group-item list-group-item-action">Online & Mobile Banking</a>
+                            <a href="#transfersPayments" class="list-group-item list-group-item-action">Transfers & Payments</a>
+                            <a href="#cardsServices" class="list-group-item list-group-item-action">Cards & Services</a>
+                            <a href="#securityPrivacy" class="list-group-item list-group-item-action">Security & Privacy</a>
+                            <a href="#troubleshooting" class="list-group-item list-group-item-action">Troubleshooting</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Need Help?</h5>
+                        <p>Can't find what you're looking for? Our support team is here to help.</p>
+                        <div class="d-grid gap-2">
+                            <a href="contact.html" class="btn btn-primary">Contact Support</a>
+                            <a href="contact.html" class="btn btn-outline-primary">Schedule a Call</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-9">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 id="accountManagement" class="mb-4">Account Management</h2>
+                        
+                        <div class="accordion mb-4" id="accountAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccount1">
+                                        How to Open an Account
+                                    </button>
+                                </h2>
+                                <div id="collapseAccount1" class="accordion-collapse collapse show" data-bs-parent="#accountAccordion">
+                                    <div class="accordion-body">
+                                        <p>To open an account with Personal Bank:</p>
+                                        <ol>
+                                            <li>Visit our website and click on "Open an Account"</li>
+                                            <li>Choose the type of account you want to open</li>
+                                            <li>Fill out the online application form with your personal information</li>
+                                            <li>Verify your identity using our secure verification process</li>
+                                            <li>Make an initial deposit (if required)</li>
+                                            <li>Review and accept the terms and conditions</li>
+                                        </ol>
+                                        <p>Alternatively, you can visit any of our branches with valid identification to open an account in person.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccount2">
+                                        How to Close an Account
+                                    </button>
+                                </h2>
+                                <div id="collapseAccount2" class="accordion-collapse collapse" data-bs-parent="#accountAccordion">
+                                    <div class="accordion-body">
+                                        <p>To close your account:</p>
+                                        <ol>
+                                            <li>Ensure all transactions have cleared and your balance is zero</li>
+                                            <li>Cancel any automatic payments or direct deposits linked to the account</li>
+                                            <li>Visit a branch with valid identification, or</li>
+                                            <li>Call our customer service at (555) 123-4567, or</li>
+                                            <li>Send a written request to: Personal Bank, Account Services, 123 Financial Street, Banking City</li>
+                                        </ol>
+                                        <p>Note: Some accounts may have early closure fees if closed within a certain period after opening.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 id="onlineBanking" class="mb-4">Online & Mobile Banking</h2>
+                        
+                        <div class="accordion mb-4" id="onlineAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnline1">
+                                        Getting Started with Online Banking
+                                    </button>
+                                </h2>
+                                <div id="collapseOnline1" class="accordion-collapse collapse show" data-bs-parent="#onlineAccordion">
+                                    <div class="accordion-body">
+                                        <p>To enroll in Online Banking:</p>
+                                        <ol>
+                                            <li>Visit our website and click on "Enroll in Online Banking"</li>
+                                            <li>Enter your account number and Social Security Number</li>
+                                            <li>Create a username and password</li>
+                                            <li>Set up security questions and answers</li>
+                                            <li>Verify your identity via email or text message</li>
+                                            <li>Log in to your new Online Banking account</li>
+                                        </ol>
+                                        <p>If you need assistance, please contact our customer service team.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnline2">
+                                        Mobile App Features
+                                    </button>
+                                </h2>
+                                <div id="collapseOnline2" class="accordion-collapse collapse" data-bs-parent="#onlineAccordion">
+                                    <div class="accordion-body">
+                                        <p>Our mobile banking app offers the following features:</p>
+                                        <ul>
+                                            <li>View account balances and transaction history</li>
+                                            <li>Transfer money between accounts</li>
+                                            <li>Pay bills and schedule payments</li>
+                                            <li>Deposit checks using mobile check deposit</li>
+                                            <li>Manage and control your debit/credit cards</li>
+                                            <li>Locate ATMs and branches near you</li>
+                                            <li>Set up account alerts and notifications</li>
+                                            <li>Secure messaging with customer service</li>
+                                        </ul>
+                                        <p>Download our app from the Apple App Store or Google Play Store.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 id="transfersPayments" class="mb-4">Transfers & Payments</h2>
+                        
+                        <div class="accordion mb-4" id="transferAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTransfer1">
+                                        How to Set Up a Transfer
+                                    </button>
+                                </h2>
+                                <div id="collapseTransfer1" class="accordion-collapse collapse show" data-bs-parent="#transferAccordion">
+                                    <div class="accordion-body">
+                                        <p>To transfer money between your accounts:</p>
+                                        <ol>
+                                            <li>Log in to Online Banking or the Mobile App</li>
+                                            <li>Select "Transfers" from the menu</li>
+                                            <li>Choose the account to transfer from and the account to transfer to</li>
+                                            <li>Enter the amount you wish to transfer</li>
+                                            <li>Select the date for the transfer (immediate or future date)</li>
+                                            <li>Review the details and confirm the transfer</li>
+                                        </ol>
+                                        <p>Transfers between Personal Bank accounts are typically processed immediately. Transfers to external accounts may take 1-3 business days.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTransfer2">
+                                        How to Set Up Bill Pay
+                                    </button>
+                                </h2>
+                                <div id="collapseTransfer2" class="accordion-collapse collapse" data-bs-parent="#transferAccordion">
+                                    <div class="accordion-body">
+                                        <p>To set up Bill Pay:</p>
+                                        <ol>
+                                            <li>Log in to Online Banking</li>
+                                            <li>Select "Bill Pay" from the menu</li>
+                                            <li>Click "Add a Payee"</li>
+                                            <li>Enter the company or person you want to pay</li>
+                                            <li>Provide the account information for the payee</li>
+                                            <li>Verify the payee details</li>
+                                            <li>Schedule your first payment</li>
+                                        </ol>
+                                        <p>You can set up one-time payments or recurring payments for regular bills. Most electronic payments are delivered within 2-3 business days.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 id="cardsServices" class="mb-4">Cards & Services</h2>
+                        
+                        <div class="accordion mb-4" id="cardsAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCards1">
+                                        Activating Your Debit/Credit Card
+                                    </button>
+                                </h2>
+                                <div id="collapseCards1" class="accordion-collapse collapse show" data-bs-parent="#cardsAccordion">
+                                    <div class="accordion-body">
+                                        <p>To activate your new debit or credit card:</p>
+                                        <ol>
+                                            <li>Call the activation number provided on the sticker on your card, or</li>
+                                            <li>Log in to Online Banking and go to the "Card Services" section, or</li>
+                                            <li>Visit any ATM and make a transaction with your PIN</li>
+                                        </ol>
+                                        <p>You will need to provide your card number and other verification details to activate your card.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCards2">
+                                        Reporting a Lost or Stolen Card
+                                    </button>
+                                </h2>
+                                <div id="collapseCards2" class="accordion-collapse collapse" data-bs-parent="#cardsAccordion">
+                                    <div class="accordion-body">
+                                        <p>If your card is lost or stolen:</p>
+                                        <ol>
+                                            <li>Call our 24/7 hotline immediately at (555) 123-LOST (5678)</li>
+                                            <li>Log in to Online Banking or the Mobile App and go to "Card Services" to report it</li>
+                                            <li>Visit any branch to report in person</li>
+                                        </ol>
+                                        <p>We will immediately block your card to prevent unauthorized use and arrange for a replacement card to be sent to you.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 id="securityPrivacy" class="mb-4">Security & Privacy</h2>
+                        
+                        <div class="accordion mb-4" id="securityAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSecurity1">
+                                        Protecting Your Online Banking
+                                    </button>
+                                </h2>
+                                <div id="collapseSecurity1" class="accordion-collapse collapse show" data-bs-parent="#securityAccordion">
+                                    <div class="accordion-body">
+                                        <p>To keep your Online Banking secure:</p>
+                                        <ul>
+                                            <li>Create a strong, unique password</li>
+                                            <li>Enable two-factor authentication</li>
+                                            <li>Never share your login credentials with anyone</li>
+                                            <li>Log out after each session, especially on shared devices</li>
+                                            <li>Keep your computer and mobile device security software updated</li>
+                                            <li>Be cautious of phishing emails and suspicious links</li>
+                                            <li>Monitor your accounts regularly for unauthorized activity</li>
+                                        </ul>
+                                        <p>We use industry-standard encryption and security measures to protect your information.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSecurity2">
+                                        Recognizing Fraudulent Activity
+                                    </button>
+                                </h2>
+                                <div id="collapseSecurity2" class="accordion-collapse collapse" data-bs-parent="#securityAccordion">
+                                    <div class="accordion-body">
+                                        <p>Watch for these signs of potential fraud:</p>
+                                        <ul>
+                                            <li>Unauthorized transactions on your account</li>
+                                            <li>Emails requesting your personal or banking information</li>
+                                            <li>Calls from someone claiming to be from the bank asking for sensitive information</li>
+                                            <li>Unexpected password reset emails</li>
+                                            <li>Changes to your account information that you didn't make</li>
+                                        </ul>
+                                        <p>If you suspect fraudulent activity, contact us immediately at (555) 123-FRAUD (3728).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h2 id="troubleshooting" class="mb-4">Troubleshooting</h2>
+                        
+                        <div class="accordion mb-4" id="troubleAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrouble1">
+                                        Forgotten Password or Username
+                                    </button>
+                                </h2>
+                                <div id="collapseTrouble1" class="accordion-collapse collapse show" data-bs-parent="#troubleAccordion">
+                                    <div class="accordion-body">
+                                        <p>If you've forgotten your password or username:</p>
+                                        <ol>
+                                            <li>Go to the login page and click "Forgot Password" or "Forgot Username"</li>
+                                            <li>Follow the instructions to verify your identity</li>
+                                            <li>For password reset, you'll receive an email with a reset link</li>
+                                            <li>For username reminder, your username will be sent to your registered email</li>
+                                            <li>If you continue to have issues, contact customer support</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrouble2">
+                                        Mobile Deposit Issues
+                                    </button>
+                                </h2>
+                                <div id="collapseTrouble2" class="accordion-collapse collapse" data-bs-parent="#troubleAccordion">
+                                    <div class="accordion-body">
+                                        <p>If you're having trouble with mobile check deposit:</p>
+                                        <ul>
+                                            <li>Ensure you have a stable internet connection</li>
+                                            <li>Make sure the check is properly endorsed</li>
+                                            <li>Place the check on a dark, contrasting background</li>
+                                            <li>Ensure all four corners of the check are visible</li>
+                                            <li>Check that the check amount is within your mobile deposit limits</li>
+                                            <li>Verify that the check is not stale-dated (typically 6 months old)</li>
+                                        </ul>
+                                        <p>If problems persist, please visit a branch or contact customer support.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Personal Bank</h5>
+                    <p>Your trusted financial partner for all your banking needs. We're committed to providing exceptional service and innovative solutions.</p>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Banking Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html#personal" class="text-white text-decoration-none">Personal Banking</a></li>
+                        <li><a href="services.html#business" class="text-white text-decoration-none">Business Banking</a></li>
+                        <li><a href="services.html#wealth" class="text-white text-decoration-none">Wealth Management</a></li>
+                        <li><a href="loans.html" class="text-white text-decoration-none">Loans & Mortgages</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="careers.html" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Legal & Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="terms.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="documentation.html" class="text-white text-decoration-none">Documentation</a></li>
+                        <li><a href="financial_education.html" class="text-white text-decoration-none">Financial Education</a></li>
+                        <li><a href="investor_relations.html" class="text-white text-decoration-none">Investor Relations</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0">&copy; 2023 Personal Bank. All rights reserved.</p>
+                <div>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize dropdowns explicitly to ensure they work
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+            var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                return new bootstrap.Dropdown(dropdownToggleEl)
+            });
+        });
+    </script>
+</body>
+</html>

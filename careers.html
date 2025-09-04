@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Personal Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .card {
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+            color: #0d6efd;
+        }
+        
+        /* Navigation and footer styles */
+        .dropdown-menu {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: none;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .dropdown-menu {
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        footer {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-university me-2"></i>Personal Bank
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item" href="loans.html">Loans & Schemes</a></li>
+                            <li><a class="dropdown-item" href="financial_education.html">Financial Education</a></li>
+                            <li><a class="dropdown-item active" href="careers.html">Careers</a></li>
+                            <li><a class="dropdown-item" href="investor_relations.html">Investor Relations</a></li>
+                            <li><a class="dropdown-item" href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Careers at Personal Bank</h1>
+            <p class="lead mb-4">Join our team and build a rewarding career in banking</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">Why Work at Personal Bank?</h2>
+                        <p>At Personal Bank, we believe our employees are our greatest asset. We're committed to creating a supportive and inclusive work environment where everyone can thrive.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <i class="fas fa-graduation-cap fa-2x text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Career Development</h5>
+                                        <p>We invest in our employees' growth with training programs, tuition assistance, and clear career paths.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <i class="fas fa-heart fa-2x text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Work-Life Balance</h5>
+                                        <p>We offer flexible work arrangements, generous paid time off, and wellness programs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <i class="fas fa-hand-holding-usd fa-2x text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Competitive Benefits</h5>
+                                        <p>Our comprehensive benefits package includes health insurance, retirement plans, and employee discounts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <i class="fas fa-users fa-2x text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Inclusive Culture</h5>
+                                        <p>We celebrate diversity and foster an environment where all voices are heard and valued.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4">Current Openings</h2>
+                        
+                        <div class="accordion" id="jobsAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJob1">
+                                        Personal Banker
+                                    </button>
+                                </h2>
+                                <div id="collapseJob1" class="accordion-collapse collapse show" data-bs-parent="#jobsAccordion">
+                                    <div class="accordion-body">
+                                        <p><strong>Location:</strong> Multiple branches available</p>
+                                        <p><strong>Job Type:</strong> Full-time</p>
+                                        
+                                        <h6>Responsibilities:</h6>
+                                        <ul>
+                                            <li>Assist customers with their banking needs</li>
+                                            <li>Open new accounts and process loan applications</li>
+                                            <li>Cross-sell bank products and services</li>
+                                            <li>Build and maintain customer relationships</li>
+                                            <li>Resolve customer issues and complaints</li>
+                                        </ul>
+                                        
+                                        <h6>Requirements:</h6>
+                                        <ul>
+                                            <li>2+ years of banking or customer service experience</li>
+                                            <li>Excellent communication and interpersonal skills</li>
+                                            <li>Knowledge of banking products and services</li>
+                                            <li>High school diploma or equivalent (Bachelor's degree preferred)</li>
+                                        </ul>
+                                        
+                                        <a href="#" class="btn btn-primary">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJob2">
+                                        Loan Officer
+                                    </button>
+                                </h2>
+                                <div id="collapseJob2" class="accordion-collapse collapse" data-bs-parent="#jobsAccordion">
+                                    <div class="accordion-body">
+                                        <p><strong>Location:</strong> Headquarters - Banking City</p>
+                                        <p><strong>Job Type:</strong> Full-time</p>
+                                        
+                                        <h6>Responsibilities:</h6>
+                                        <ul>
+                                            <li>Evaluate loan applications and creditworthiness</li>
+                                            <li>Guide customers through the loan process</li>
+                                            <li>Ensure compliance with lending regulations</li>
+                                            <li>Build relationships with real estate professionals</li>
+                                            <li>Meet lending targets and goals</li>
+                                        </ul>
+                                        
+                                        <h6>Requirements:</h6>
+                                        <ul>
+                                            <li>3+ years of lending experience</li>
+                                            <li>NMLS certification</li>
+                                            <li>Strong analytical and decision-making skills</li>
+                                            <li>Bachelor's degree in Finance, Business, or related field</li>
+                                        </ul>
+                                        
+                                        <a href="#" class="btn btn-primary">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJob3">
+                                        Software Developer
+                                    </button>
+                                </h2>
+                                <div id="collapseJob3" class="accordion-collapse collapse" data-bs-parent="#jobsAccordion">
+                                    <div class="accordion-body">
+                                        <p><strong>Location:</strong> Remote / Headquarters - Banking City</p>
+                                        <p><strong>Job Type:</strong> Full-time</p>
+                                        
+                                        <h6>Responsibilities:</h6>
+                                        <ul>
+                                            <li>Develop and maintain banking applications</li>
+                                            <li>Implement security measures for digital banking</li>
+                                            <li>Collaborate with cross-functional teams</li>
+                                            <li>Troubleshoot and resolve technical issues</li>
+                                            <li>Stay current with emerging technologies</li>
+                                        </ul>
+                                        
+                                        <h6>Requirements:</h6>
+                                        <ul>
+                                            <li>3+ years of software development experience</li>
+                                            <li>Proficiency in Java, Python, or similar languages</li>
+                                            <li>Experience with database systems and APIs</li>
+                                            <li>Knowledge of cybersecurity best practices</li>
+                                            <li>Bachelor's degree in Computer Science or related field</li>
+                                        </ul>
+                                        
+                                        <a href="#" class="btn btn-primary">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-outline-primary">View All Open Positions</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="mb-4">Our Hiring Process</h2>
+                        
+                        <div class="row">
+                            <div class="col-md-4 text-center mb-4">
+                                <div class="bg-primary text-white rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-file-alt fa-2x"></i>
+                                </div>
+                                <h5 class="mt-3">1. Application</h5>
+                                <p>Submit your application online or in-person</p>
+                            </div>
+                            
+                            <div class="col-md-4 text-center mb-4">
+                                <div class="bg-primary text-white rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-phone fa-2x"></i>
+                                </div>
+                                <h5 class="mt-3">2. Phone Screen</h5>
+                                <p>Initial conversation with our recruiting team</p>
+                            </div>
+                            
+                            <div class="col-md-4 text-center mb-4">
+                                <div class="bg-primary text-white rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-users fa-2x"></i>
+                                </div>
+                                <h5 class="mt-3">3. Interviews</h5>
+                                <p>Meet with hiring managers and team members</p>
+                            </div>
+                            
+                            <div class="col-md-6 text-center mb-4">
+                                <div class="bg-primary text-white rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-tasks fa-2x"></i>
+                                </div>
+                                <h5 class="mt-3">4. Assessment</h5>
+                                <p>Complete job-specific assessments or exercises</p>
+                            </div>
+                            
+                            <div class="col-md-6 text-center mb-4">
+                                <div class="bg-primary text-white rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-handshake fa-2x"></i>
+                                </div>
+                                <h5 class="mt-3">5. Offer</h5>
+                                <p>Receive and review your employment offer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Employee Benefits</h4>
+                        
+                        <div class="mb-3">
+                            <h6>Health & Wellness</h6>
+                            <ul>
+                                <li>Medical, dental, and vision insurance</li>
+                                <li>Health savings accounts</li>
+                                <li>Wellness programs and gym discounts</li>
+                                <li>Mental health support</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <h6>Financial Security</h6>
+                            <ul>
+                                <li>Competitive salaries</li>
+                                <li>401(k) with company match</li>
+                                <li>Employee stock purchase plan</li>
+                                <li>Performance bonuses</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <h6>Work-Life Balance</h6>
+                            <ul>
+                                <li>Flexible work arrangements</li>
+                                <li>Generous paid time off</li>
+                                <li>Parental leave</li>
+                                <li>Employee assistance program</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <h6>Learning & Development</h6>
+                            <ul>
+                                <li>Tuition reimbursement</li>
+                                <li>Professional certification support</li>
+                                <li>Leadership development programs</li>
+                                <li>Internal mobility opportunities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Life at Personal Bank</h4>
+                        <p>Hear what our employees have to say about working at Personal Bank:</p>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Employee" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                                <div>
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small class="text-muted">Senior Personal Banker, 5 years</small>
+                                </div>
+                            </div>
+                            <p class="mb-0">"Personal Bank truly invests in its employees. I started as a teller and have been promoted twice with their support and training programs."</p>
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Employee" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                                <div>
+                                    <h6 class="mb-0">Michael Chen</h6>
+                                    <small class="text-muted">Software Developer, 3 years</small>
+                                </div>
+                            </div>
+                            <p class="mb-0">"The work-life balance here is exceptional. I get to work on challenging projects while still having time for my family and hobbies."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Get in Touch</h4>
+                        <p>Interested in joining our team but don't see the right position? Send us your resume anyway!</p>
+                        
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="resume" class="form-label">Upload Resume</label>
+                                <input type="file" class="form-control" id="resume" accept=".pdf,.doc,.docx">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message (Optional)</label>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Personal Bank</h5>
+                    <p>Your trusted financial partner for all your banking needs. We're committed to providing exceptional service and innovative solutions.</p>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Banking Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html#personal" class="text-white text-decoration-none">Personal Banking</a></li>
+                        <li><a href="services.html#business" class="text-white text-decoration-none">Business Banking</a></li>
+                        <li><a href="services.html#wealth" class="text-white text-decoration-none">Wealth Management</a></li>
+                        <li><a href="loans.html" class="text-white text-decoration-none">Loans & Mortgages</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="careers.html" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Legal & Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="terms.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="documentation.html" class="text-white text-decoration-none">Documentation</a></li>
+                        <li><a href="financial_education.html" class="text-white text-decoration-none">Financial Education</a></li>
+                        <li><a href="investor_relations.html" class="text-white text-decoration-none">Investor Relations</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0">&copy; 2023 Personal Bank. All rights reserved.</p>
+                <div>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize dropdowns explicitly to ensure they work
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+            var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                return new bootstrap.Dropdown(dropdownToggleEl)
+            });
+        });
+    </script>
+</body>
+</html>
