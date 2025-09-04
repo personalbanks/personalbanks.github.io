@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Bank - Your Trusted Financial Partner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <style>
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #0d6efd;
+        }
+        
+        .testimonial-card {
+            border-left: 4px solid #0d6efd;
+            padding-left: 20px;
+        }
+        
+        .cta-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-university me-2"></i>Personal Bank
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item" href="loans.html">Loans & Schemes</a></li>
+                            <li><a class="dropdown-item" href="financial_education.html">Financial Education</a></li>
+                            <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                            <li><a class="dropdown-item" href="investor_relations.html">Investor Relations</a></li>
+                            <li><a class="dropdown-item" href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Your Financial Freedom Starts Here</h1>
+            <p class="lead mb-4">Experience banking that puts you first with innovative solutions and personalized service.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="register.html" class="btn btn-primary btn-lg">Open an Account</a>
+                <a href="services.html" class="btn btn-outline-light btn-lg">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container mt-4">
+        <!-- Features Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Why Choose Personal Bank?</h2>
+                    <p class="lead text-muted">We offer a range of services designed to meet your financial needs</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Secure Banking</h4>
+                        <p>Your funds are protected with industry-leading security measures and FDIC insurance.</p>
+                    </div>
+                    
+                    <div class="col-md-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Digital Banking</h4>
+                        <p>Access your accounts anytime, anywhere with our advanced mobile and online banking platforms.</p>
+                    </div>
+                    
+                    <div class="col-md-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4>Low Fees</h4>
+                        <p>Enjoy competitive rates and minimal fees on all our banking products and services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Our Services</h2>
+                    <p class="lead text-muted">Comprehensive financial solutions for individuals and businesses</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-piggy-bank fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Savings Accounts</h5>
+                                <p class="card-text">Grow your money with high-yield savings accounts and certificates of deposit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-credit-card fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Checking Accounts</h5>
+                                <p class="card-text">Everyday banking with no hidden fees and convenient access to your funds.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-home fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Home Loans</h5>
+                                <p class="card-text">Competitive mortgage rates and personalized service for home buyers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Investment Services</h5>
+                                <p class="card-text">Expert guidance for your investment goals and retirement planning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">What Our Customers Say</h2>
+                    <p class="lead text-muted">Don't just take our word for it - hear from our satisfied customers</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="fst-italic">"Personal Bank has been my financial partner for over 10 years. Their customer service is exceptional and their digital banking platform is incredibly convenient."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small class="text-muted">Business Owner</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="fst-italic">"I switched to Personal Bank for their low fees and haven't looked back. The mobile app is intuitive, and I love being able to deposit checks from home."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <h6 class="mb-0">Michael Chen</h6>
+                                    <small class="text-muted">Software Engineer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="fst-italic">"As a first-time home buyer, I was nervous about the mortgage process. The team at Personal Bank made it smooth and stress-free. Highly recommend!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <h6 class="mb-0">Jessica Williams</h6>
+                                    <small class="text-muted">Teacher</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-4">Ready to Get Started?</h2>
+                <p class="lead mb-4">Join thousands of satisfied customers who trust Personal Bank with their financial needs</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="register.html" class="btn btn-primary btn-lg">Open an Account</a>
+                    <a href="contact.html" class="btn btn-outline-secondary btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Personal Bank</h5>
+                    <p>Your trusted financial partner for all your banking needs. We're committed to providing exceptional service and innovative solutions.</p>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Banking Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html#personal" class="text-white text-decoration-none">Personal Banking</a></li>
+                        <li><a href="services.html#business" class="text-white text-decoration-none">Business Banking</a></li>
+                        <li><a href="services.html#wealth" class="text-white text-decoration-none">Wealth Management</a></li>
+                        <li><a href="loans.html" class="text-white text-decoration-none">Loans & Mortgages</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="careers.html" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Legal & Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="terms.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="documentation.html" class="text-white text-decoration-none">Documentation</a></li>
+                        <li><a href="financial_education.html" class="text-white text-decoration-none">Financial Education</a></li>
+                        <li><a href="investor_relations.html" class="text-white text-decoration-none">Investor Relations</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0">&copy; 2023 Personal Bank. All rights reserved.</p>
+                <div>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/script.js"></script>
+    <script>
+        // Initialize dropdowns explicitly to ensure they work
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+            var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                return new bootstrap.Dropdown(dropdownToggleEl)
+            });
+        });
+    </script>
+</body>
+</html>
