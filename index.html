@@ -9,7 +9,7 @@
     <meta name="author" content="Personal Bank">
     <meta name="robots" content="index, follow">
     
-    <!-- Canonical URL to avoid duplicate content issues -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.personalbanks.github.io">
     
     <!-- Open Graph / Social Media Meta Tags -->
@@ -18,12 +18,15 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80">
     <meta property="og:url" content="https://www.personalbanks.github.io">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Personal Bank">
+    <meta property="fb:app_id" content="61580378908114">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Personal Bank - Your Trusted Financial Partner">
     <meta name="twitter:description" content="Experience banking that puts you first with innovative solutions and personalized service.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80">
+    <meta name="twitter:site" content="@PersonalBank">
     
     <!-- JSON-LD structured data -->
     <script type="application/ld+json">
@@ -57,7 +60,13 @@
           "longitude": -74.0060
         },
         "geoRadius": "100000"
-      }
+      },
+      "sameAs": [
+        "https://www.facebook.com/61580378908114",
+        "https://twitter.com/PersonalBank",
+        "https://www.linkedin.com/company/personal-bank",
+        "https://www.instagram.com/personalbank"
+      ]
     }
     </script>
     
@@ -65,9 +74,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="static/css/style.css" rel="stylesheet">
     
-    <!-- Reference to sitemap for search engines -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
-    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WK373FTW7R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WK373FTW7R');
+</script>
+
     <style>
         .feature-icon {
             font-size: 3rem;
@@ -97,6 +117,11 @@
         /* Improved loading for above-the-fold content */
         .hero-section {
             will-change: transform;
+        }
+        
+        /* Schema markup for reviews */
+        .review-item {
+            display: none;
         }
     </style>
 </head>
@@ -259,12 +284,52 @@
             </div>
         </section>
 
-        <!-- Testimonials Section -->
+        <!-- Testimonials Section with Schema Markup -->
         <section class="py-5">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="fw-bold">What Our Banking Customers Say</h2>
                     <p class="lead text-muted">Don't just take our word for it - hear from our satisfied customers</p>
+                </div>
+                
+                <!-- Hidden schema markup for reviews -->
+                <div class="review-item" itemscope itemtype="https://schema.org/Review">
+                    <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/FinancialService">
+                        <meta itemprop="name" content="Personal Bank">
+                    </span>
+                    <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
+                    </span>
+                    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <meta itemprop="name" content="Sarah Johnson">
+                    </span>
+                </div>
+                
+                <div class="review-item" itemscope itemtype="https://schema.org/Review">
+                    <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/FinancialService">
+                        <meta itemprop="name" content="Personal Bank">
+                    </span>
+                    <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
+                    </span>
+                    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <meta itemprop="name" content="Michael Chen">
+                    </span>
+                </div>
+                
+                <div class="review-item" itemscope itemtype="https://schema.org/Review">
+                    <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/FinancialService">
+                        <meta itemprop="name" content="Personal Bank">
+                    </span>
+                    <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
+                    </span>
+                    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <meta itemprop="name" content="Jessica Williams">
+                    </span>
                 </div>
                 
                 <div class="row g-4">
@@ -330,9 +395,9 @@
                     <p>Your trusted financial partner for all your banking needs. We're committed to providing exceptional service and innovative solutions.</p>
                     <div class="mt-3">
                         <a href="https://www.facebook.com/61580378908114" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-3" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/PersonalBank" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/personal-bank" class="text-white me-3" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/personalbank" class="text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 
@@ -367,7 +432,7 @@
                         <li><a href="security.html" class="text-white text-decoration-none">Security Center</a></li>
                         <li><a href="documentation.html" class="text-white text-decoration-none">Documentation</a></li>
                         <li><a href="financial_education.html" class="text-white text-decoration-none">Financial Education</a></li>
-                        <li><a href="investor_relations.html" class="text-white textDecoration-none">Investor Relations</a></li>
+                        <li><a href="investor_relations.html" class="text-white text-decoration-none">Investor Relations</a></li>
                         <li><a href="sitemap.html" class="text-white text-decoration-none">Sitemap</a></li>
                     </ul>
                 </div>
@@ -379,6 +444,7 @@
                 <p class="mb-0">&copy; 2023 Personal Bank. All rights reserved. FDIC insured.</p>
                 <div class="d-flex mt-2">
                     <a href="sitemap.html" class="text-white text-decoration-none me-3">Sitemap</a>
+                    <a href="privacy.html" class="text-white text-decoration-none me-3">Privacy Policy</a>
                     <a href="accessibility.html" class="text-white text-decoration-none">Accessibility Statement</a>
                 </div>
             </div>
