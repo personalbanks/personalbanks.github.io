@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Personal Bank">
-<link rel="apple-touch-icon" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo2.jpg">
     <style>
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
@@ -534,5 +534,72 @@
             });
         });
     </script>
+    <script src="static/js/sw.js"></script>
+<script>
+// Register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js')
+      .then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      })
+      .catch(function(error) {
+        console.log('ServiceWorker registration failed: ', error);
+      });
+  });
+}
+
+// Add install prompt handling
+let deferredPrompt;
+const installButton = document.createElement('button');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent the mini-infobar from appearing on mobile
+  e.preventDefault();
+  // Stash the event so it can be triggered later
+  deferredPrompt = e;
+  // Show custom install button if needed
+  showInstallPromotion();
+});
+
+function showInstallPromotion() {
+  // You can create and show your custom install button here
+  installButton.style.display = 'block';
+  installButton.textContent = 'Install App';
+  installButton.classList.add('btn', 'btn-success', 'm-2');
+  document.body.appendChild(installButton);
+  
+  installButton.addEventListener('click', () => {
+    // Hide the app provided install promotion
+    installButton.style.display = 'none';
+    // Show the install prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+      deferredPrompt = null;
+    });
+  });
+}
+
+// Track app installed event
+window.addEventListener('appinstalled', () => {
+  console.log('PWA was installed');
+  // Hide the install button if it's visible
+  if (installButton) installButton.style.display = 'none';
+  // You can log to analytics that the app was installed
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'pwa_installed', {
+      'event_category': 'Engagement',
+      'event_label': 'PWA Installation',
+      'value': 1
+    });
+  }
+});
+</script>
 </body>
 </html>
