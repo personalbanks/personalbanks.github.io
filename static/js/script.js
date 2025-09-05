@@ -53,3 +53,39 @@ document.addEventListener('DOMContentLoaded', function() {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
 });
+
+// Check online/offline status and update UI accordingly
+function updateOnlineStatus() {
+  const statusElement = document.getElementById('online-status');
+  if (statusElement) {
+    if (navigator.onLine) {
+      statusElement.innerHTML = '<i class="fas fa-wifi"></i> Online';
+      statusElement.className = 'badge bg-success';
+    } else {
+      statusElement.innerHTML = '<i class="fas fa-wifi-slash"></i> Offline';
+      statusElement.className = 'badge bg-danger';
+    }
+  }
+}
+
+// Initial check
+updateOnlineStatus();
+
+// Listen for online/offline events
+window.addEventListener('online', updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
+
+// Enhanced fetch with fallback to cache
+function fetchWithFallback(url, options) {
+  return fetch(url, options)
+    .catch(error => {
+      console.log('Network error, trying cache:', error);
+      return caches.match(url)
+        .then(response => {
+          if (response) {
+            return response;
+          }
+          throw new Error('Resource not available in cache');
+        });
+    });
+}

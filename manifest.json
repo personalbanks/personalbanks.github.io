@@ -1,0 +1,26 @@
+{
+  "name": "Personal Bank",
+  "short_name": "PersonalBank",
+  "description": "Your Trusted Financial Partner - Secure Banking Services & Financial Solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d6efd",
+  "theme_color": "#0d6efd",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "images/logo2.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["finance", "business"],
+  "lang": "en"
+}
