@@ -452,44 +452,101 @@
             </div>
         </div>
         
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Ask an Expert</h4>
-                <p>Have a financial question? Our team of financial educators is here to help.</p>
-                
-<form action="https://formspree.io/f/xkgvpzyk" method="POST">
-  <div class="mb-3">
-    <label for="questionName" class="form-label">Name</label>
-    <input type="text" class="form-control" id="questionName" name="name" required>
-  </div>
-  <div class="mb-3">
-    <label for="questionEmail" class="form-label">Email Address</label>
-    <input type="email" class="form-control" id="questionEmail" name="email" required>
-  </div>
-  <div class="mb-3">
-    <label for="questionTopic" class="form-label">Topic</label>
-    <select class="form-select" id="questionTopic" name="topic" required>
-      <option value="">Select a topic</option>
-      <option value="budgeting">Budgeting & Saving</option>
-      <option value="credit">Credit & Debt</option>
-      <option value="home">Home Buying</option>
-      <option value="investing">Investing & Retirement</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-  <div class="mb-3">
-    <label for="question" class="form-label">Your Question</label>
-    <textarea class="form-control" id="question" name="question" rows="4" required></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary w-100">Submit Question</button>
-</form>
-
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Ask an Expert</h4>
+        <p>Have a financial question? Our team of financial educators is here to help.</p>
+        
+        <form id="expertForm" onsubmit="return submitToGoogleForm(event)">
+            <div class="mb-3">
+                <label for="questionName" class="form-label">Name *</label>
+                <input type="text" class="form-control" id="questionName" name="entry.946069493" required>
             </div>
-        </div>
+            <div class="mb-3">
+                <label for="questionEmail" class="form-label">Email Address *</label>
+                <input type="email" class="form-control" id="questionEmail" name="entry.264229459" required>
+            </div>
+            <div class="mb-3">
+                <label for="questionTopic" class="form-label">Topic *</label>
+                <select class="form-select" id="questionTopic" name="entry.2018267896" required>
+                    <option value="" selected disabled>Select a topic</option>
+                    <option value="Budgeting & Saving">Budgeting & Saving</option>
+                    <option value="Credit & Debt">Credit & Debt</option>
+                    <option value="Home Buying">Home Buying</option>
+                    <option value="Investing & Retirement">Investing & Retirement</option>
+                    <option value="__other_option__">Other</option>
+                </select>
+                <div id="otherTopicContainer" style="display: none;" class="mt-2">
+                    <input type="text" class="form-control" id="otherTopicInput" placeholder="Please specify">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="question" class="form-label">Your Question</label>
+                <textarea class="form-control" id="question" name="entry.1344405469" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit Question</button>
+        </form>
+        
+        <div id="formMessage" class="alert mt-3" style="display: none;"></div>
     </div>
 </div>
 
-<footer class="bg-dark text-white py-5 mt-5">
+<script>
+// Show/hide other topic input for dropdown
+document.getElementById('questionTopic').addEventListener('change', function() {
+    document.getElementById('otherTopicContainer').style.display = 
+        this.value === '__other_option__' ? 'block' : 'none';
+});
+
+// Form submission handler
+function submitToGoogleForm(event) {
+    event.preventDefault();
+    
+    const topicSelect = document.getElementById('questionTopic');
+    if (topicSelect.value === '__other_option__') {
+        const otherInput = document.getElementById('otherTopicInput');
+        if (otherInput.value.trim()) {
+            // Create a hidden input for the other option
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'entry.2018267896';
+            hiddenInput.value = otherInput.value;
+            event.target.appendChild(hiddenInput);
+            
+            // Disable the original select to avoid duplicate submission
+            topicSelect.disabled = true;
+        }
+    }
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSc2vaNTWljQfDpPb4PQrfCjosTGTnxAdB9MtAokvGg_z23e4g/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+    })
+    .then(() => {
+        document.getElementById('formMessage').textContent = 'Thank you! Your question has been submitted.';
+        document.getElementById('formMessage').className = 'alert alert-success mt-3';
+        document.getElementById('formMessage').style.display = 'block';
+        
+        form.reset();
+        document.getElementById('otherTopicContainer').style.display = 'none';
+        topicSelect.disabled = false;
+    })
+    .catch(error => {
+        document.getElementById('formMessage').textContent = 'There was an error submitting your question. Please try again.';
+        document.getElementById('formMessage').className = 'alert alert-danger mt-3';
+        document.getElementById('formMessage').style.display = 'block';
+        console.error('Error:', error);
+    });
+    
+    return false;
+}
+</script>
+
+    <footer class="bg-dark text-white py-5 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 mb-4">
