@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Verification - Personal Bank</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #d93025;
+            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 10px;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+        }
+        .critical {
+            background-color: #ffebee;
+            border-left: 4px solid #d93025;
+        }
+        .fixed {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0d6efd;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            font-weight: bold;
+        }
+        .btn-danger {
+            background: #d93025;
+        }
+        .btn-success {
+            background: #4caf50;
+        }
+        code {
+            background: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Security Verification Required</h1>
+        <p>Google Safe Browsing has flagged <strong>personalbanks.github.io</strong> as containing harmful content that may trick visitors into sharing personal information.</p>
+        
+        <div class="status critical">
+            <h3>🚨 Current Status: DANGEROUS</h3>
+            <p>This site has been flagged for security issues that need immediate attention.</p>
+        </div>
+
+        <h2>Required Security Fixes</h2>
+        
+        <div class="status">
+            <h3>1. Form Handling Security</h3>
+            <p>Your forms are currently using Formspree which may be flagged. Replace with a more secure solution:</p>
+            <ul>
+                <li>Remove Formspree actions from all forms</li>
+                <li>Implement proper server-side form validation</li>
+                <li>Add CSRF protection to all forms</li>
+            </ul>
+        </div>
+
+        <div class="status">
+            <h3>2. Security Headers</h3>
+            <p>Add these security headers to your server configuration:</p>
+            <code>
+                # Security Headers<br>
+                add_header X-Frame-Options "SAMEORIGIN" always;<br>
+                add_header X-XSS-Protection "1; mode=block" always;<br>
+                add_header X-Content-Type-Options "nosniff" always;<br>
+                add_header Referrer-Policy "strict-origin" always;<br>
+                add_header Content-Security-Policy "default-src 'self' https:; script-src 'self' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com; frame-ancestors 'self'; form-action 'self';" always;
+            </code>
+        </div>
+
+        <div class="status">
+            <h3>3. HTTPS Enforcement</h3>
+            <p>Ensure all resources are loaded over HTTPS:</p>
+            <ul>
+                <li>Update all external scripts to use HTTPS</li>
+                <li>Fix mixed content issues</li>
+                <li>Implement HSTS header</li>
+            </ul>
+        </div>
+
+        <div class="status">
+            <h3>4. Remove Suspicious Code</h3>
+            <p>Thoroughly audit your code for:</p>
+            <ul>
+                <li>Any suspicious JavaScript that might have been injected</li>
+                <li>Malicious iframes or redirects</li>
+                <li>Code that prompts for unnecessary personal information</li>
+            </ul>
+        </div>
+
+        <div class="status fixed">
+            <h3>5. Request Review After Fixing</h3>
+            <p>After implementing these fixes, request a review through:</p>
+            <ul>
+                <li>Google Search Console</li>
+                <li>Google Safe Browsing Report Tool</li>
+            </ul>
+        </div>
+
+        <h2>Next Steps</h2>
+        <p>Implement these fixes immediately and then request a review through Google Search Console.</p>
+        
+        <div>
+            <a href="https://search.google.com/search-console" class="btn btn-success" target="_blank">Google Search Console</a>
+            <a href="https://safebrowsing.google.com/safebrowsing/report_error/?hl=en" class="btn" target="_blank">Report to Safe Browsing</a>
+            <a href="https://transparencyreport.google.com/safe-browsing/search" class="btn" target="_blank">Check Safe Browsing Status</a>
+        </div>
+
+        <p style="margin-top: 30px; font-style: italic; color: #666;">
+            Note: This warning page is for diagnostic purposes only. Remove this page after implementing the security fixes.
+        </p>
+    </div>
+</body>
+</html>

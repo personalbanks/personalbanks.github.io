@@ -155,47 +155,56 @@
                         <div class="card shadow">
                             <div class="card-body p-5">
                                 <h2 class="text-center mb-4">Send Us a Message</h2>
-                                <form action="https://formspree.io/f/xkgvpzyk" method="POST">
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="firstName" class="form-label">First Name</label>
-                                            <input type="text" class="form-control" id="firstName" name="firstName" required>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="lastName" class="form-label">Last Name</label>
-                                            <input type="text" class="form-control" id="lastName" name="lastName" required>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="email" class="form-label">Email Address</label>
-                                            <input type="email" class="form-control" id="email" name="email" required>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="phone" class="form-label">Phone Number</label>
-                                            <input type="tel" class="form-control" id="phone" name="phone">
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="subject" class="form-label">Subject</label>
-                                        <select class="form-select" id="subject" name="subject" required>
-                                            <option value="">Select a subject</option>
-                                            <option value="account">Account Inquiry</option>
-                                            <option value="loan">Loan Application</option>
-                                            <option value="technical">Technical Support</option>
-                                            <option value="general">General Question</option>
-                                            <option value="complaint">Complaint</option>
-                                            <option value="feedback">Feedback</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                                    </div>
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                                    </div>
-                                </form>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLScAlp_aba-c-2UmEmLLGj36HzJAjP1xcuMYHzOKhBUko2QKIQ/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="firstName" name="entry.2146295541" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="lastName" name="entry.583947798" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="email" class="form-label">Email Address</label>
+      <input type="email" class="form-control" id="email" name="entry.2107067857" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" id="phone" name="entry.1391928386">
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="subject" class="form-label">Subject</label>
+    <select class="form-select" id="subject" name="entry.580207334" required>
+      <option value="">Select a subject</option>
+      <option value="Account Inquiry">Account Inquiry</option>
+      <option value="Loan Application">Loan Application</option>
+      <option value="Technical Support">Technical Support</option>
+      <option value="General Question">General Question</option>
+      <option value="Complaint">Complaint</option>
+      <option value="Feedback">Feedback</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="message" class="form-label">Message</label>
+    <textarea class="form-control" id="message" name="entry.1748890293" rows="5" required></textarea>
+  </div>
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+  </div>
+</form>
+
+<!-- Hidden iframe -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+<script>
+document.querySelector("form").addEventListener("submit", function(){
+    alert("✅ Thank you! Your message has been sent.");
+});
+</script>
                             </div>
                         </div>
                     </div>
